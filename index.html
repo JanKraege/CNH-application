@@ -1,1 +1,819 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jan Kraege – Bewerbung für das Traineeprogramm Commercial & Marketing Support – Parts & Precision Technology bei CNH Industrial." />
+  <title>Jan Kraege | CNH Industrial – Commercial & Marketing Support</title>
+  <style>
+    :root{
+      --navy:#102538;
+      --navy-2:#17384f;
+      --steel:#668092;
+      --green:#567a38;
+      --green-2:#799c50;
+      --lime:#b7cc6a;
+      --sand:#efe7d4;
+      --cream:#f8f5ed;
+      --white:#ffffff;
+      --ink:#16222b;
+      --muted:#66747d;
+      --orange:#d88734;
+      --line:#d8ddd8;
+      --soft-green:#edf3e7;
+      --soft-blue:#eaf1f5;
+      --shadow:0 20px 55px rgba(19,40,54,.14);
+      --small-shadow:0 10px 28px rgba(19,40,54,.10);
+      --radius:24px;
+    }
 
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:var(--cream);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .lang-de,.lang-en{display:none!important}
+    body.show-de .lang-de,body.show-en .lang-en{display:block!important}
+    body.show-de .inline.lang-de,body.show-en .inline.lang-en{display:inline!important}
+    body.show-de .flex.lang-de,body.show-en .flex.lang-en{display:flex!important}
+
+    nav{
+      position:sticky;top:0;z-index:1000;
+      display:flex;align-items:center;justify-content:space-between;gap:22px;
+      padding:13px 5%;
+      background:rgba(248,245,237,.95);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(16,37,56,.12);
+      box-shadow:0 4px 18px rgba(16,37,56,.06)
+    }
+    .brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:280px}
+    .brand-mark{
+      width:58px;height:52px;border-radius:13px;
+      display:grid;place-items:center;background:var(--navy);color:#fff;
+      font-size:11px;font-weight:1000;line-height:1.05;text-align:center;
+      letter-spacing:.8px;box-shadow:0 9px 20px rgba(16,37,56,.22)
+    }
+    .brand-name{font-size:16px;font-weight:900;line-height:1.15}
+    .brand-name small{display:block;margin-top:4px;color:var(--muted);font-size:10px;letter-spacing:.7px;text-transform:uppercase}
+    nav ul{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;font-size:13px;font-weight:850}
+    nav a:hover{color:var(--green)}
+    .lang-button,.contact-button{
+      border-radius:999px;padding:10px 16px;font-size:13px;font-weight:900;cursor:pointer
+    }
+    .lang-button{border:2px solid var(--green);background:#fff;color:var(--green)}
+    .contact-button{background:var(--green);color:#fff!important;border:0;box-shadow:0 8px 18px rgba(86,122,56,.22)}
+
+    header{
+      min-height:750px;padding:105px 6% 95px;position:relative;overflow:hidden;
+      display:grid;grid-template-columns:minmax(320px,1.05fr) minmax(340px,.95fr);
+      align-items:center;gap:55px;
+      background:
+        radial-gradient(circle at 86% 18%,rgba(183,204,106,.30),transparent 25%),
+        radial-gradient(circle at 12% 88%,rgba(86,122,56,.13),transparent 28%),
+        linear-gradient(180deg,#faf8f2 0%,#f2eddf 100%)
+    }
+    header:before{
+      content:"";position:absolute;inset:0;opacity:.16;pointer-events:none;
+      background-image:
+        linear-gradient(rgba(16,37,56,.18) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(16,37,56,.18) 1px,transparent 1px);
+      background-size:58px 58px;mask-image:linear-gradient(to right,transparent 0,#000 48%,#000 100%)
+    }
+    .hero-copy,.hero-scene{position:relative;z-index:2}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;padding:9px 15px;border-radius:999px;
+      background:#fff;border:1px solid var(--line);box-shadow:var(--small-shadow);
+      color:var(--green);font-size:12px;font-weight:950;letter-spacing:1.1px;text-transform:uppercase
+    }
+    .eyebrow:before{content:"●";color:var(--orange)}
+    h1{
+      margin:26px 0 21px;max-width:900px;
+      font-size:clamp(47px,6vw,82px);line-height:.98;letter-spacing:-3px
+    }
+    .hero-copy h2{
+      margin:0;max-width:820px;font-size:clamp(20px,2.15vw,30px);
+      line-height:1.38;font-weight:600;color:#33434d
+    }
+    .hero-copy h2 strong{color:var(--green)}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0}
+    .hero-tags span{
+      padding:9px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);
+      font-size:13px;font-weight:850;box-shadow:0 5px 14px rgba(16,37,56,.06)
+    }
+    .start-button{
+      display:inline-flex;align-items:center;gap:10px;text-decoration:none;border-radius:999px;
+      background:var(--navy);color:#fff;padding:16px 23px;font-weight:900;
+      box-shadow:0 12px 28px rgba(16,37,56,.24)
+    }
+    .start-button:after{content:"→";font-size:21px}
+
+    .control-center{
+      width:min(100%,600px);min-height:485px;border-radius:32px;
+      background:var(--navy);padding:20px;box-shadow:0 30px 75px rgba(16,37,56,.28);
+      border:7px solid #fff;position:relative;overflow:hidden
+    }
+    .control-top{display:flex;justify-content:space-between;align-items:center;color:#fff;margin-bottom:17px}
+    .control-logo{font-weight:1000;letter-spacing:1px}
+    .live{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:900;text-transform:uppercase}
+    .live:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 6px rgba(183,204,106,.13)}
+    .map-panel{
+      position:relative;height:265px;border-radius:20px;overflow:hidden;background:#d9e5c7;
+      border:1px solid rgba(255,255,255,.12)
+    }
+    .field{
+      position:absolute;border-radius:7px;transform:rotate(-7deg);
+      background:repeating-linear-gradient(90deg,#6f9149 0 7px,#8aaa5d 7px 14px)
+    }
+    .field.f1{left:-20px;top:18px;width:220px;height:78px}
+    .field.f2{right:-25px;top:10px;width:250px;height:95px;background:repeating-linear-gradient(90deg,#b6a162 0 7px,#c8b578 7px 14px)}
+    .field.f3{left:30px;bottom:18px;width:240px;height:104px}
+    .field.f4{right:18px;bottom:15px;width:210px;height:110px;background:repeating-linear-gradient(90deg,#7f9f55 0 7px,#a0b970 7px 14px)}
+    .route-line{
+      position:absolute;left:12%;right:8%;top:50%;height:5px;
+      border-radius:99px;background:repeating-linear-gradient(90deg,var(--orange) 0 18px,transparent 18px 29px);
+      transform:rotate(6deg);filter:drop-shadow(0 2px 1px rgba(0,0,0,.15))
+    }
+    .gps-pin{
+      position:absolute;width:34px;height:34px;border-radius:50% 50% 50% 0;
+      background:var(--navy);transform:rotate(-45deg);box-shadow:0 7px 15px rgba(0,0,0,.22)
+    }
+    .gps-pin:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#fff;left:12px;top:12px}
+    .gps-pin.p1{left:19%;top:42%}.gps-pin.p2{right:18%;bottom:25%;background:var(--orange)}
+    .tractor{
+      position:absolute;left:43%;top:45%;width:94px;height:52px;transform:translate(-50%,-50%)
+    }
+    .tractor-body{position:absolute;left:22px;top:12px;width:55px;height:27px;border-radius:7px 12px 4px 5px;background:var(--navy)}
+    .tractor-cab{position:absolute;left:39px;top:0;width:31px;height:24px;border-radius:7px 7px 0 0;background:#e9f4f7;border:6px solid var(--navy)}
+    .tractor-wheel{position:absolute;bottom:0;border-radius:50%;background:#1d252a;border:5px solid #3d4b52}
+    .tractor-wheel.big{width:31px;height:31px;right:7px}.tractor-wheel.small{width:23px;height:23px;left:12px;bottom:1px}
+    .dashboard-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .metric{background:#17384f;border:1px solid rgba(255,255,255,.1);border-radius:15px;padding:15px;color:#fff}
+    .metric small{display:block;color:rgba(255,255,255,.62);font-size:10px;text-transform:uppercase;letter-spacing:.7px}
+    .metric strong{display:block;margin-top:5px;font-size:17px}
+    .metric .bar{height:5px;border-radius:99px;background:rgba(255,255,255,.13);margin-top:10px;overflow:hidden}
+    .metric .bar i{display:block;height:100%;background:var(--lime);border-radius:99px}
+    .satellite{
+      position:absolute;right:-12px;top:95px;width:76px;height:76px;border-radius:50%;
+      background:var(--orange);display:grid;place-items:center;color:#fff;font-size:31px;
+      border:6px solid #fff;box-shadow:var(--small-shadow)
+    }
+
+    section{position:relative;padding:92px 7%;max-width:1450px;margin:0 auto;scroll-margin-top:105px}
+    .section-label{
+      display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:8px;
+      background:var(--navy);color:#fff;font-size:12px;font-weight:950;letter-spacing:1.15px;text-transform:uppercase
+    }
+    .section-title{font-size:clamp(36px,4.25vw,60px);line-height:1.04;letter-spacing:-2px;margin:18px 0 12px}
+    .section-subtitle{max-width:930px;margin:0 0 44px;color:var(--muted);font-size:19px}
+
+    .tool-grid{display:grid;grid-template-columns:repeat(6,minmax(135px,1fr));gap:18px}
+    .tool-card{
+      min-height:245px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px 18px;
+      text-align:center;box-shadow:var(--small-shadow);transition:.25s ease;position:relative;overflow:hidden
+    }
+    .tool-card:hover{transform:translateY(-7px);box-shadow:0 18px 35px rgba(16,37,56,.15)}
+    .tool-card:before{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:var(--green)}
+    .tool-icon{
+      width:86px;height:86px;border-radius:23px;margin:0 auto 18px;display:grid;place-items:center;
+      background:var(--soft-green);font-size:38px
+    }
+    .tool-card:nth-child(even) .tool-icon{background:var(--soft-blue)}
+    .tool-card h3{font-size:18px;line-height:1.25;margin:0 0 8px}
+    .tool-card p{font-size:14px;color:var(--muted);margin:0}
+
+    .case-wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px}
+    .case-main{
+      background:var(--navy);color:#fff;border-radius:var(--radius);padding:38px;box-shadow:var(--shadow)
+    }
+    .case-main h3{font-size:35px;line-height:1.1;margin:0 0 18px}
+    .case-main p{color:rgba(255,255,255,.82);font-size:17px}
+    .case-stamp{margin-top:26px;border-radius:14px;padding:18px 20px;background:var(--lime);color:var(--ink);font-weight:1000;transform:rotate(-1deg)}
+    .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+    .case-card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:23px;box-shadow:var(--small-shadow);position:relative}
+    .case-card:after{content:attr(data-n);position:absolute;right:15px;top:8px;color:#e7ece8;font-size:34px;font-weight:1000}
+    .case-card h4{position:relative;z-index:1;color:var(--green);font-size:18px;margin:0 0 8px}
+    .case-card p{margin:0;color:var(--muted);font-size:14px}
+
+    .engine-section{max-width:none;background:var(--navy);color:#fff;padding:95px 7%}
+    .engine-inner{max-width:1280px;margin:0 auto}
+    .engine-section .section-subtitle{color:rgba(255,255,255,.7)}
+    .engine{display:grid;grid-template-columns:1fr 175px 1fr;gap:25px;align-items:center}
+    .engine-block{min-height:355px;border-radius:var(--radius);padding:34px;background:#17384f;border:1px solid rgba(255,255,255,.1);box-shadow:0 18px 45px rgba(0,0,0,.23)}
+    .engine-block:first-child{border-top:8px solid var(--orange)}
+    .engine-block:last-child{border-top:8px solid var(--lime)}
+    .engine-block h3{font-size:29px;margin:8px 0 8px}
+    .engine-block .chip{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.09);font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.7px}
+    .engine-block ul{margin:23px 0 0;padding-left:20px}
+    .engine-block li{margin:10px 0;color:rgba(255,255,255,.82)}
+    .gear{
+      width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:28px;
+      background:var(--orange);color:#fff;font-size:18px;font-weight:1000;box-shadow:0 15px 35px rgba(216,135,52,.2)
+    }
+
+    .campaign-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center}
+    .machine-panel{
+      background:#fff;border:1px solid var(--line);border-radius:30px;padding:25px;box-shadow:var(--shadow)
+    }
+    .machine-screen{border-radius:22px;background:var(--soft-blue);min-height:540px;padding:22px}
+    .screen-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;font-weight:900}
+    .screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .screen-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;min-height:145px}
+    .screen-card small{color:var(--muted);display:block}
+    .screen-card strong{font-size:16px}
+    .screen-card .mini-chart{height:54px;margin-top:15px;display:flex;align-items:end;gap:6px}
+    .screen-card .mini-chart i{display:block;flex:1;background:var(--green);border-radius:4px 4px 0 0}
+    .screen-card:nth-child(2) .mini-chart i{background:var(--orange)}
+    .screen-wide{grid-column:1/-1;background:var(--navy);color:#fff;border-radius:17px;padding:20px}
+    .screen-wide strong{font-size:20px}
+    .screen-wide p{margin:6px 0 0;color:rgba(255,255,255,.72)}
+    .campaign-points{display:grid;gap:16px}
+    .campaign-point{display:grid;grid-template-columns:61px 1fr;gap:17px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--small-shadow)}
+    .campaign-point .icon{width:61px;height:61px;border-radius:17px;display:grid;place-items:center;background:var(--soft-green);font-size:29px}
+    .campaign-point:nth-child(even) .icon{background:var(--soft-blue)}
+    .campaign-point h3{font-size:20px;margin:0 0 4px}
+    .campaign-point p{margin:0;color:var(--muted);font-size:15px}
+
+    .dach-board{
+      border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);
+      padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center
+    }
+    .dach-map{min-height:410px;position:relative;border-radius:23px;background:var(--soft-green);overflow:hidden}
+    .dach-map:before{
+      content:"";position:absolute;inset:0;opacity:.26;
+      background-image:linear-gradient(rgba(86,122,56,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(86,122,56,.25) 1px,transparent 1px);
+      background-size:35px 35px
+    }
+    .country{
+      position:absolute;background:var(--green);color:#fff;border-radius:50%;display:grid;place-items:center;
+      font-weight:1000;border:6px solid #fff;box-shadow:var(--small-shadow)
+    }
+    .country.de{width:135px;height:135px;left:42%;top:18%}
+    .country.at{width:105px;height:105px;left:49%;bottom:16%;background:var(--orange)}
+    .country.ch{width:88px;height:88px;left:22%;bottom:23%;background:var(--navy)}
+    .map-route{position:absolute;left:30%;right:18%;top:52%;height:6px;background:repeating-linear-gradient(90deg,var(--orange) 0 16px,transparent 16px 28px);transform:rotate(8deg)}
+    .dach-copy h3{font-size:32px;line-height:1.14;margin:0 0 15px}
+    .dach-copy p{color:var(--muted)}
+    .dach-list{display:grid;gap:12px;margin-top:22px}
+    .dach-list div{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;background:var(--soft-blue);border-radius:13px}
+    .dach-list b{color:var(--green)}
+
+
+    .journey-wrap{
+      position:relative;
+      margin-top:18px;
+      padding:54px 0 18px;
+    }
+    .journey-track{
+      position:absolute;
+      left:6%;
+      right:6%;
+      top:103px;
+      height:7px;
+      border-radius:999px;
+      background:repeating-linear-gradient(
+        90deg,
+        var(--navy) 0 20px,
+        transparent 20px 31px
+      );
+      opacity:.9;
+    }
+    .journey-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:repeat(8,1fr);
+      gap:14px;
+    }
+    .journey-stop{text-align:center}
+    .journey-pin{
+      width:82px;
+      height:82px;
+      margin:0 auto 16px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#fff;
+      border:6px solid var(--green);
+      box-shadow:var(--small-shadow);
+      font-size:29px;
+      position:relative;
+    }
+    .journey-stop:nth-child(even) .journey-pin{border-color:var(--orange)}
+    .journey-stop:last-child .journey-pin{
+      background:var(--navy);
+      color:#fff;
+      border-color:var(--lime);
+    }
+    .journey-stop h3{
+      font-size:15px;
+      line-height:1.25;
+      margin:0 0 5px;
+    }
+    .journey-stop p{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.45;
+    }
+    .journey-caption{
+      margin-top:34px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .journey-caption article{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:var(--small-shadow);
+    }
+    .journey-caption h4{
+      margin:0 0 8px;
+      color:var(--green);
+      font-size:18px;
+    }
+    .journey-caption p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .impact-board{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .impact-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 22px;box-shadow:var(--small-shadow);min-height:240px}
+    .impact-card .num{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;font-weight:1000}
+    .impact-card h3{font-size:21px;margin:17px 0 8px}
+    .impact-card p{margin:0;color:var(--muted);font-size:15px}
+    .impact-note{
+      margin-top:35px;border-left:8px solid var(--green);border-radius:18px;background:var(--soft-green);
+      padding:25px 27px;font-size:19px;font-weight:750
+    }
+
+    .motivation{
+      max-width:none;background:linear-gradient(135deg,#486c34,#78994d);color:#fff;padding:100px 7%
+    }
+    .motivation-inner{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .motivation h2{font-size:clamp(40px,5vw,68px);line-height:1.03;letter-spacing:-2px;margin:15px 0 20px}
+    .motivation p{font-size:18px;color:rgba(255,255,255,.86)}
+    .field-card{
+      background:#fff;color:var(--ink);padding:36px;border-radius:26px;box-shadow:0 25px 60px rgba(0,0,0,.22)
+    }
+    .field-card h3{font-size:26px;margin:0 0 18px}
+    .field-line{display:flex;justify-content:space-between;gap:18px;padding:12px 0;border-bottom:1px dashed #c9cec9}
+    .field-line:last-of-type{border-bottom:0}
+    .status{color:var(--green);font-weight:1000}
+    .final-message{margin-top:24px;padding:17px;border-radius:14px;background:var(--soft-green);font-weight:900}
+
+    .contact-section{padding:85px 7%;text-align:center}
+    .contact-card{max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:28px;padding:42px;box-shadow:var(--shadow)}
+    .contact-card h2{font-size:42px;margin:0 0 12px}
+    .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}
+    .contact-links a{padding:12px 17px;border-radius:999px;text-decoration:none;background:var(--navy);color:#fff;font-weight:850}
+    .contact-links a:nth-child(2){background:var(--green)}
+    .contact-links a:nth-child(3){background:var(--orange)}
+    footer{background:#0d1d29;color:rgba(255,255,255,.68);text-align:center;padding:27px 6%;font-size:13px}
+
+    @media(max-width:1180px){
+      nav{flex-direction:column}.brand{min-width:auto}
+      header{grid-template-columns:1fr}.hero-scene{min-height:480px}
+      .tool-grid{grid-template-columns:repeat(3,1fr)}
+      .impact-board{grid-template-columns:repeat(2,1fr)}
+      .journey-grid{grid-template-columns:repeat(4,1fr);gap:30px 14px}
+      .journey-track{display:none}
+    }
+    @media(max-width:900px){
+      .case-wrap,.campaign-layout,.dach-board,.motivation-inner{grid-template-columns:1fr}
+      .engine{grid-template-columns:1fr}.gear{margin:0 auto;width:150px;height:150px}
+      .tool-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:620px){
+      nav ul{justify-content:center}
+      nav li:nth-child(n+5):not(:last-child):not(:nth-last-child(2)){display:none}
+      header{padding:75px 6% 70px}
+      h1{letter-spacing:-2px}
+      section{padding:70px 6%}
+      .tool-grid,.case-grid,.impact-board,.dashboard-row,.screen-grid,.journey-grid,.journey-caption{grid-template-columns:1fr}
+      .screen-wide{grid-column:auto}
+      .control-center{min-height:520px}
+      .country.de{left:43%;top:18%}.country.at{left:46%;bottom:12%}.country.ch{left:10%;bottom:24%}
+      .contact-card{padding:32px 20px}
+    }
+  </style>
+</head>
+<body class="show-de">
+
+<nav>
+  <a class="brand" href="#start">
+    <div class="brand-mark">FIELD<br>CONTROL</div>
+    <div class="brand-name">
+      Jan Kraege · Commercial Field Lab
+      <small>
+        <span class="lang-de inline">Bewerbung CNH Industrial · Parts & Precision Technology</span>
+        <span class="lang-en inline">CNH Industrial Application · Parts & Precision Technology</span>
+      </small>
+    </div>
+  </a>
+  <ul>
+    <li><a href="#toolkit"><span class="lang-de inline">Toolkit</span><span class="lang-en inline">Toolkit</span></a></li>
+    <li><a href="#experience"><span class="lang-de inline">Erfahrung</span><span class="lang-en inline">Experience</span></a></li>
+    <li><a href="#campaigns"><span class="lang-de inline">Kampagnen</span><span class="lang-en inline">Campaigns</span></a></li>
+    <li><a href="#journey"><span class="lang-de inline">Journey</span><span class="lang-en inline">Journey</span></a></li>
+    <li><a href="#impact"><span class="lang-de inline">Impact</span><span class="lang-en inline">Impact</span></a></li>
+    <li><a href="#motivation"><span class="lang-de inline">Motivation</span><span class="lang-en inline">Motivation</span></a></li>
+    <li><button class="lang-button" id="languageToggle" type="button">English</button></li>
+    <li><a class="contact-button" href="#contact"><span class="lang-de inline">Kontakt</span><span class="lang-en inline">Contact</span></a></li>
+  </ul>
+</nav>
+
+<header id="start">
+  <div class="hero-copy">
+    <span class="eyebrow lang-de">Commercial Field Control · Bewerbung 2026</span>
+    <span class="eyebrow lang-en">Commercial Field Control · Application 2026</span>
+
+    <h1 class="lang-de">Marketing, Vertrieb und Technologie auf ein gemeinsames Ziel ausrichten.</h1>
+    <h1 class="lang-en">Aligning marketing, sales and technology around one shared goal.</h1>
+
+    <h2 class="lang-de">
+      Eine Verbindung aus <strong>kommerzieller Analyse, digitalem Marketing und hands-on Umsetzung</strong> – für Parts, Aftersales und Precision Technology in der DACH-Region.
+    </h2>
+    <h2 class="lang-en">
+      A combination of <strong>commercial analysis, digital marketing and hands-on execution</strong> – for Parts, Aftersales and Precision Technology across DACH.
+    </h2>
+
+    <div class="hero-tags">
+      <span>Product Marketing</span><span>Pricing & Benchmarking</span><span>Sales Support</span>
+      <span>E-Commerce</span><span>DACH</span><span>Precision Technology</span>
+    </div>
+
+    <a href="#toolkit" class="start-button">
+      <span class="lang-de inline">Control Center öffnen</span>
+      <span class="lang-en inline">Open Control Center</span>
+    </a>
+  </div>
+
+  <div class="hero-scene" aria-hidden="true">
+    <div class="control-center">
+      <div class="control-top">
+        <div class="control-logo">COMMERCIAL FIELD OS</div>
+        <div class="live">DACH connected</div>
+      </div>
+      <div class="map-panel">
+        <div class="field f1"></div><div class="field f2"></div><div class="field f3"></div><div class="field f4"></div>
+        <div class="route-line"></div>
+        <div class="gps-pin p1"></div><div class="gps-pin p2"></div>
+        <div class="tractor">
+          <div class="tractor-body"></div><div class="tractor-cab"></div>
+          <div class="tractor-wheel big"></div><div class="tractor-wheel small"></div>
+        </div>
+      </div>
+      <div class="dashboard-row">
+        <div class="metric"><small>Campaign Readiness</small><strong>92%</strong><div class="bar"><i style="width:92%"></i></div></div>
+        <div class="metric"><small>Market Coverage</small><strong>DACH</strong><div class="bar"><i style="width:84%"></i></div></div>
+        <div class="metric"><small>Execution Mode</small><strong>Hands-on</strong><div class="bar"><i style="width:96%"></i></div></div>
+      </div>
+      <div class="satellite">⌖</div>
+    </div>
+  </div>
+</header>
+
+<section id="toolkit">
+  <span class="section-label lang-de">Modul 01 · Commercial Toolkit</span>
+  <span class="section-label lang-en">Module 01 · Commercial Toolkit</span>
+  <h2 class="section-title lang-de">Mein Werkzeugkasten für den Markt</h2>
+  <h2 class="section-title lang-en">My Toolkit for the Market</h2>
+  <p class="section-subtitle lang-de">
+    Sechs Fähigkeiten, mit denen ich Marketingpläne nicht nur entwickle, sondern gemeinsam mit Vertrieb, Handel und weiteren Schnittstellen in konkrete Marktaktivitäten übersetze.
+  </p>
+  <p class="section-subtitle lang-en">
+    Six capabilities that help me translate marketing plans into concrete market activities together with sales, dealers and cross-functional partners.
+  </p>
+
+  <div class="tool-grid">
+    <article class="tool-card"><div class="tool-icon">📊</div><h3 class="lang-de">Markt- & Wettbewerbsanalyse</h3><h3 class="lang-en">Market & Competitor Analysis</h3><p class="lang-de">Marktpotenziale, Kundengruppen und Wettbewerbspositionen strukturiert bewerten.</p><p class="lang-en">Structuring market potential, customer groups and competitive positions.</p></article>
+    <article class="tool-card"><div class="tool-icon">🏷️</div><h3 class="lang-de">Pricing & Benchmarking</h3><h3 class="lang-en">Pricing & Benchmarking</h3><p class="lang-de">Preise, Margenlogik und Positionierung aus einer kommerziellen Perspektive betrachten.</p><p class="lang-en">Assessing pricing, margin logic and positioning from a commercial perspective.</p></article>
+    <article class="tool-card"><div class="tool-icon">📣</div><h3 class="lang-de">Kampagnenmanagement</h3><h3 class="lang-en">Campaign Management</h3><p class="lang-de">Online- und Offline-Maßnahmen planen, koordinieren und anhand ihrer Wirkung verbessern.</p><p class="lang-en">Planning, coordinating and improving online and offline activities.</p></article>
+    <article class="tool-card"><div class="tool-icon">🤝</div><h3 class="lang-de">Sales Support</h3><h3 class="lang-en">Sales Support</h3><p class="lang-de">Marketinginhalte verständlich aufbereiten und die Umsetzung im Vertrieb unterstützen.</p><p class="lang-en">Preparing clear marketing content and supporting effective sales execution.</p></article>
+    <article class="tool-card"><div class="tool-icon">🛒</div><h3 class="lang-de">E-Commerce & CRM</h3><h3 class="lang-en">E-Commerce & CRM</h3><p class="lang-de">Digitale Touchpoints, E-Mail-Marketing und Customer Journeys ganzheitlich betrachten.</p><p class="lang-en">Connecting digital touchpoints, email marketing and customer journeys.</p></article>
+    <article class="tool-card"><div class="tool-icon">⚙️</div><h3 class="lang-de">Projektorganisation</h3><h3 class="lang-en">Project Organisation</h3><p class="lang-de">Mehrere Aufgaben priorisieren, Stakeholder koordinieren und pragmatisch umsetzen.</p><p class="lang-en">Prioritising tasks, coordinating stakeholders and executing pragmatically.</p></article>
+  </div>
+</section>
+
+<section id="experience">
+  <span class="section-label lang-de">Modul 02 · Commercial Case</span>
+  <span class="section-label lang-en">Module 02 · Commercial Case</span>
+  <h2 class="section-title lang-de">Von Analyse zu klarer Management-Empfehlung</h2>
+  <h2 class="section-title lang-en">From Analysis to a Clear Management Recommendation</h2>
+  <p class="section-subtitle lang-de">
+    Meine Erfahrung bei BRITA Australia zeigt, wie ich Marktinformationen, Kundenverhalten und wirtschaftliche Überlegungen zu einer belastbaren Entscheidung zusammenführe.
+  </p>
+  <p class="section-subtitle lang-en">
+    My experience at BRITA Australia demonstrates how I combine market information, customer behaviour and commercial considerations into a robust decision.
+  </p>
+
+  <div class="case-wrap">
+    <div class="case-main">
+      <h3>Subscription Model · Commercial Viability</h3>
+      <p class="lang-de">Ich analysierte die wirtschaftliche Tragfähigkeit eines potenziellen Subscription Models im australischen Markt und arbeitete dabei an der Schnittstelle von Marketing, Sales und E-Commerce.</p>
+      <p class="lang-en">I assessed the commercial viability of a potential subscription model in the Australian market, working across Marketing, Sales and E-commerce.</p>
+      <p class="lang-de">Entscheidend war nicht, eine Idee zu bestätigen, sondern Chancen, Risiken und Kundenwert objektiv zu bewerten und daraus eine klare Empfehlung abzuleiten.</p>
+      <p class="lang-en">The objective was not to validate an idea, but to assess opportunities, risks and customer value objectively and derive a clear recommendation.</p>
+      <div class="case-stamp lang-de">Ergebnis: fundierte Empfehlung für das Management statt rein beschreibender Analyse.</div>
+      <div class="case-stamp lang-en">Outcome: a well-supported management recommendation rather than a purely descriptive analysis.</div>
+    </div>
+    <div class="case-grid">
+      <article class="case-card" data-n="01"><h4>Customer Segments</h4><p class="lang-de">Welche Zielgruppen besitzen den stärksten Bedarf und den höchsten potenziellen Nutzen?</p><p class="lang-en">Which target groups show the strongest need and potential value?</p></article>
+      <article class="case-card" data-n="02"><h4>Purchasing Behaviour</h4><p class="lang-de">Wie kaufen Kunden heute und welche Verhaltensänderung ist realistisch?</p><p class="lang-en">How do customers buy today and what behavioural change is realistic?</p></article>
+      <article class="case-card" data-n="03"><h4>Competitive Position</h4><p class="lang-de">Welche Alternativen bestehen und wie differenziert wäre das Angebot?</p><p class="lang-en">Which alternatives exist and how differentiated would the offer be?</p></article>
+      <article class="case-card" data-n="04"><h4>Commercial Impact</h4><p class="lang-de">Wie verhalten sich Kundennutzen, Aufwand, Risiko und wirtschaftliches Potenzial?</p><p class="lang-en">How do customer value, effort, risk and commercial potential relate?</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="engine-section">
+  <div class="engine-inner">
+    <span class="section-label lang-de">Modul 03 · Dual Engine</span>
+    <span class="section-label lang-en">Module 03 · Dual Engine</span>
+    <h2 class="section-title lang-de">Strukturierte Analyse trifft schnelle Umsetzung</h2>
+    <h2 class="section-title lang-en">Structured Analysis Meets Fast Execution</h2>
+    <p class="section-subtitle lang-de">Zwei unterschiedliche Umfelder haben meinen Arbeitsstil geprägt: ein international strukturiertes Unternehmen und ein junges, schnell wachsendes Business mit Start-up-Charakter.</p>
+    <p class="section-subtitle lang-en">Two different environments shaped my working style: a structured international company and a young, fast-growing business with a start-up mindset.</p>
+
+    <div class="engine">
+      <article class="engine-block">
+        <span class="chip">BRITA Australia</span>
+        <h3 class="lang-de">Kommerzielle Tiefe</h3><h3 class="lang-en">Commercial Depth</h3>
+        <ul class="lang-de"><li>Markt-, Kunden- und Wettbewerbsanalysen</li><li>Zusammenarbeit mit Marketing, Sales und E-Commerce</li><li>Management-Präsentation und klare Empfehlung</li><li>Strukturierte Projektarbeit mit kommerzieller Relevanz</li></ul>
+        <ul class="lang-en"><li>Market, customer and competitor analysis</li><li>Collaboration across Marketing, Sales and E-commerce</li><li>Management presentation and clear recommendation</li><li>Structured project work with commercial relevance</li></ul>
+      </article>
+
+      <div class="gear lang-de">Analyse<br>+<br>Tempo<br>+<br>Ownership</div>
+      <div class="gear lang-en">Analysis<br>+<br>Speed<br>+<br>Ownership</div>
+
+      <article class="engine-block">
+        <span class="chip">Tokyo Headspa Sydney</span>
+        <h3 class="lang-de">Hands-on Dynamik</h3><h3 class="lang-en">Hands-on Dynamics</h3>
+        <ul class="lang-de"><li>Junges, schnell wachsendes Unternehmen</li><li>Wechselnde Prioritäten und kurze Umsetzungsschleifen</li><li>Kampagnen, Performance-Auswertung und CRM</li><li>Eigeninitiative, Kreativität und pragmatische Lösungen</li></ul>
+        <ul class="lang-en"><li>Young, fast-growing business</li><li>Changing priorities and short execution cycles</li><li>Campaigns, performance analysis and CRM</li><li>Initiative, creativity and pragmatic solutions</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="campaigns">
+  <span class="section-label lang-de">Modul 04 · Campaign Machine</span>
+  <span class="section-label lang-en">Module 04 · Campaign Machine</span>
+  <h2 class="section-title lang-de">Marketingpläne in Marktaktivität übersetzen</h2>
+  <h2 class="section-title lang-en">Turning Marketing Plans into Market Activity</h2>
+  <p class="section-subtitle lang-de">Die Rolle bei CNH verbindet Produktmarketing, Händlerunterstützung, E-Commerce, Kommunikation und Sales Enablement. Genau diese Schnittstellen machen sie für mich besonders attraktiv.</p>
+  <p class="section-subtitle lang-en">The CNH role connects product marketing, dealer support, e-commerce, communication and sales enablement. These interfaces are exactly what make it especially attractive to me.</p>
+
+  <div class="campaign-layout">
+    <div class="machine-panel" aria-hidden="true">
+      <div class="machine-screen">
+        <div class="screen-head"><span>CAMPAIGN CONTROL</span><span>● LIVE</span></div>
+        <div class="screen-grid">
+          <div class="screen-card"><small>Pricing Benchmark</small><strong>Market Position</strong><div class="mini-chart"><i style="height:33%"></i><i style="height:56%"></i><i style="height:78%"></i><i style="height:66%"></i><i style="height:90%"></i></div></div>
+          <div class="screen-card"><small>Dealer Activation</small><strong>Campaign Roll-out</strong><div class="mini-chart"><i style="height:25%"></i><i style="height:46%"></i><i style="height:61%"></i><i style="height:81%"></i><i style="height:94%"></i></div></div>
+          <div class="screen-card"><small>Digital Touchpoints</small><strong>E-Commerce & Social</strong><div class="mini-chart"><i style="height:45%"></i><i style="height:72%"></i><i style="height:58%"></i><i style="height:86%"></i><i style="height:96%"></i></div></div>
+          <div class="screen-card"><small>Commercial Support</small><strong>Sales Enablement</strong><div class="mini-chart"><i style="height:39%"></i><i style="height:55%"></i><i style="height:74%"></i><i style="height:88%"></i><i style="height:94%"></i></div></div>
+          <div class="screen-wide"><strong>Insight → Briefing → Roll-out → Performance → Improvement</strong><p>Ein klarer Ablauf verbindet Strategie, Umsetzung und messbare Wirkung.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="campaign-points">
+      <article class="campaign-point"><div class="icon">🎯</div><div><h3 class="lang-de">Zielgruppenorientierung</h3><h3 class="lang-en">Audience Focus</h3><p class="lang-de">Inhalte und Maßnahmen auf Händler, Vertrieb und Endkunden ausrichten.</p><p class="lang-en">Tailoring content and activities to dealers, sales teams and end customers.</p></div></article>
+      <article class="campaign-point"><div class="icon">📍</div><div><h3 class="lang-de">POS & Digital</h3><h3 class="lang-en">POS & Digital</h3><p class="lang-de">Produkte und Promotions konsistent über physische und digitale Kontaktpunkte begleiten.</p><p class="lang-en">Supporting products and promotions consistently across physical and digital touchpoints.</p></div></article>
+      <article class="campaign-point"><div class="icon">📈</div><div><h3 class="lang-de">Performance & Learnings</h3><h3 class="lang-en">Performance & Learnings</h3><p class="lang-de">Ergebnisse auswerten und konkrete Verbesserungen für kommende Aktivitäten ableiten.</p><p class="lang-en">Evaluating results and deriving concrete improvements for future activities.</p></div></article>
+      <article class="campaign-point"><div class="icon">🧩</div><div><h3 class="lang-de">Cross-funktionale Koordination</h3><h3 class="lang-en">Cross-functional Coordination</h3><p class="lang-de">Sales, Marketing, Produktmanagement und externe Partner auf ein gemeinsames Ziel ausrichten.</p><p class="lang-en">Aligning Sales, Marketing, Product Management and external partners around one goal.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="dach">
+  <span class="section-label lang-de">Modul 05 · DACH Network</span>
+  <span class="section-label lang-en">Module 05 · DACH Network</span>
+  <h2 class="section-title lang-de">Drei Märkte. Mehrere Marken. Ein gemeinsamer Commercial Plan.</h2>
+  <h2 class="section-title lang-en">Three Markets. Multiple Brands. One Shared Commercial Plan.</h2>
+  <p class="section-subtitle lang-de">Die internationale Verantwortung für Deutschland, Österreich und die Schweiz verbindet Marktverständnis, Koordination und konsequente Umsetzung.</p>
+  <p class="section-subtitle lang-en">Responsibility across Germany, Austria and Switzerland combines market understanding, coordination and disciplined execution.</p>
+
+  <div class="dach-board">
+    <div class="dach-map" aria-hidden="true">
+      <div class="map-route"></div>
+      <div class="country de">DE</div><div class="country at">AT</div><div class="country ch">CH</div>
+    </div>
+    <div class="dach-copy">
+      <h3 class="lang-de">International denken, lokal relevant handeln</h3>
+      <h3 class="lang-en">Think Internationally, Act with Local Relevance</h3>
+      <p class="lang-de">Meine Studien- und Arbeitserfahrung in Australien hat mir gezeigt, wie wichtig es ist, unterschiedliche Marktbedingungen, Perspektiven und Kommunikationsstile zu verstehen.</p>
+      <p class="lang-en">My study and work experience in Australia taught me the importance of understanding different market conditions, perspectives and communication styles.</p>
+      <div class="dach-list">
+        <div><b>01</b><span class="lang-de">Marketingpläne konsequent in den einzelnen Märkten ausrollen.</span><span class="lang-en">Roll out marketing plans consistently across individual markets.</span></div>
+        <div><b>02</b><span class="lang-de">Lokale Anforderungen berücksichtigen, ohne die Markenlogik zu verlieren.</span><span class="lang-en">Respect local requirements without losing brand consistency.</span></div>
+        <div><b>03</b><span class="lang-de">Vertrieb, Händler und interne Teams klar und zuverlässig koordinieren.</span><span class="lang-en">Coordinate sales, dealers and internal teams clearly and reliably.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="journey">
+  <span class="section-label lang-de">Modul 06 · International Journey</span>
+  <span class="section-label lang-en">Module 06 · International Journey</span>
+
+  <h2 class="section-title lang-de">Von Deutschland nach Sydney – und mit globaler Perspektive zurück</h2>
+  <h2 class="section-title lang-en">From Germany to Sydney – Returning with a Global Perspective</h2>
+
+  <p class="section-subtitle lang-de">
+    Mein internationaler Weg verbindet wirtschaftliches Studium, praktische Erfahrung, interkulturelle Zusammenarbeit und die Fähigkeit, mich schnell in neue Märkte und Arbeitsweisen einzuarbeiten.
+  </p>
+  <p class="section-subtitle lang-en">
+    My international journey combines business education, practical experience, intercultural collaboration and the ability to adapt quickly to new markets and ways of working.
+  </p>
+
+  <div class="journey-wrap">
+    <div class="journey-track"></div>
+
+    <div class="journey-grid">
+      <div class="journey-stop">
+        <div class="journey-pin">🇩🇪</div>
+        <h3>Bachelor</h3>
+        <p>Business Administration<br>2020–2024</p>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-pin">✈️</div>
+        <h3>Exchange</h3>
+        <p>UTS Sydney<br>2022</p>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-pin">💧</div>
+        <h3>BRITA Australia</h3>
+        <p>Sales & Marketing<br>2022–2023</p>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-pin">📚</div>
+        <h3>Bachelor Thesis</h3>
+        <p>Australian Supply Chains<br>2024</p>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-pin">🎓</div>
+        <h3>Master</h3>
+        <p>UTS Management<br>2025–2026</p>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-pin">🌏</div>
+        <h3>Global Perspective</h3>
+        <p>Strategy & Supply Chain<br>International Context</p>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-pin">⚡</div>
+        <h3>Tokyo Headspa</h3>
+        <p>Fast-growing Business<br>2026</p>
+      </div>
+
+      <div class="journey-stop">
+        <div class="journey-pin">🚜</div>
+        <h3>Next Stop</h3>
+        <p>CNH Industrial<br>DACH 2026</p>
+      </div>
+    </div>
+
+    <div class="journey-caption">
+      <article>
+        <h4 class="lang-de">Internationale Anpassungsfähigkeit</h4>
+        <h4 class="lang-en">International Adaptability</h4>
+        <p class="lang-de">Mehrere Jahre Studium und Arbeit in Australien haben mich gelehrt, mich schnell auf neue Kulturen, Märkte und Teams einzustellen.</p>
+        <p class="lang-en">Several years of studying and working in Australia taught me to adapt quickly to new cultures, markets and teams.</p>
+      </article>
+
+      <article>
+        <h4 class="lang-de">Cross-funktionale Zusammenarbeit</h4>
+        <h4 class="lang-en">Cross-functional Collaboration</h4>
+        <p class="lang-de">Ich habe gelernt, unterschiedliche Perspektiven aus Marketing, Sales, E-Commerce und Management zu einem gemeinsamen Ergebnis zusammenzuführen.</p>
+        <p class="lang-en">I learned to bring together perspectives from Marketing, Sales, E-commerce and Management around a shared outcome.</p>
+      </article>
+
+      <article>
+        <h4 class="lang-de">Relevanz für CNH</h4>
+        <h4 class="lang-en">Relevance for CNH</h4>
+        <p class="lang-de">Diese internationale Erfahrung passt zu einer Rolle, die mehrere Marken, drei DACH-Märkte und die Zusammenarbeit in einem globalen Konzern verbindet.</p>
+        <p class="lang-en">This international experience fits a role that connects multiple brands, three DACH markets and collaboration within a global company.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <span class="section-label lang-de">Modul 07 · Precision Impact</span>
+  <span class="section-label lang-en">Module 07 · Precision Impact</span>
+  <h2 class="section-title lang-de">Warum diese Branche für mich Zukunft hat</h2>
+  <h2 class="section-title lang-en">Why This Industry Represents the Future to Me</h2>
+  <p class="section-subtitle lang-de">
+    Landwirtschaft steht vor der Aufgabe, Produktivität, Wirtschaftlichkeit und einen bewussteren Ressourceneinsatz miteinander zu verbinden. Precision Technology macht diese Verbindung besonders greifbar.
+  </p>
+  <p class="section-subtitle lang-en">
+    Agriculture must connect productivity, commercial viability and more conscious use of resources. Precision Technology makes this connection especially tangible.
+  </p>
+
+  <div class="impact-board">
+    <article class="impact-card"><div class="num">01</div><h3 class="lang-de">Effizienz</h3><h3 class="lang-en">Efficiency</h3><p class="lang-de">Digitale und datenbasierte Lösungen können Entscheidungen präziser und Abläufe effizienter machen.</p><p class="lang-en">Digital and data-driven solutions can make decisions more precise and operations more efficient.</p></article>
+    <article class="impact-card"><div class="num">02</div><h3 class="lang-de">Ressourcenbewusstsein</h3><h3 class="lang-en">Resource Awareness</h3><p class="lang-de">Technologie kann dazu beitragen, Betriebsmittel gezielter einzusetzen und unnötige Verluste zu reduzieren.</p><p class="lang-en">Technology can support more targeted use of inputs and help reduce avoidable waste.</p></article>
+    <article class="impact-card"><div class="num">03</div><h3 class="lang-de">Kundennutzen</h3><h3 class="lang-en">Customer Value</h3><p class="lang-de">Gute Commercial-Kommunikation macht komplexe Lösungen verständlich und ihren Nutzen sichtbar.</p><p class="lang-en">Strong commercial communication makes complex solutions understandable and their value visible.</p></article>
+    <article class="impact-card"><div class="num">04</div><h3 class="lang-de">Langfristiger Impact</h3><h3 class="lang-en">Long-term Impact</h3><p class="lang-de">Die Branche verbindet wirtschaftliche Relevanz mit einer zentralen gesellschaftlichen Aufgabe: verlässliche Landwirtschaft.</p><p class="lang-en">The industry combines commercial relevance with a central societal task: reliable agriculture.</p></article>
+  </div>
+
+  <div class="impact-note lang-de">
+    Mein Ziel ist es, nicht nur Marketingmaßnahmen umzusetzen, sondern dabei zu helfen, Lösungen sichtbar zu machen, die Landwirtschaft effizienter, zukunftsfähiger und ressourcenbewusster gestalten können.
+  </div>
+  <div class="impact-note lang-en">
+    My goal is not only to execute marketing activities, but to help make solutions visible that can support more efficient, future-ready and resource-conscious agriculture.
+  </div>
+</section>
+
+<section class="motivation" id="motivation">
+  <div class="motivation-inner">
+    <div>
+      <span class="section-label lang-de">Final Field · Motivation</span>
+      <span class="section-label lang-en">Final Field · Motivation</span>
+      <h2 class="lang-de">Commercial Thinking. Praktische Umsetzung. Relevanter Impact.</h2>
+      <h2 class="lang-en">Commercial Thinking. Practical Execution. Relevant Impact.</h2>
+      <p class="lang-de">Das Traineeprogramm spricht mich an, weil es Marketing, Vertrieb, Produkt, E-Commerce und internationale Zusammenarbeit in einer Rolle verbindet.</p>
+      <p class="lang-en">The traineeship appeals to me because it connects marketing, sales, product, e-commerce and international collaboration in one role.</p>
+      <p class="lang-de">Besonders motiviert mich die Möglichkeit, mich in Parts, Aftersales und Precision Technology einzuarbeiten und gleichzeitig an Themen mitzuwirken, die für eine produktive und nachhaltigere Landwirtschaft relevant sind.</p>
+      <p class="lang-en">I am especially motivated by the opportunity to develop expertise in Parts, Aftersales and Precision Technology while contributing to topics relevant to productive and more sustainable agriculture.</p>
+      <p class="lang-de">Ich bringe analytische Tiefe, internationale Erfahrung und eine hands-on Mentalität mit – und möchte diese Fähigkeiten in einem globalen Unternehmen mit starken Marken und klarer Marktnähe weiterentwickeln.</p>
+      <p class="lang-en">I bring analytical depth, international experience and a hands-on mindset, and I want to develop these capabilities further in a global company with strong brands and close market proximity.</p>
+    </div>
+
+    <div class="field-card">
+      <h3>Candidate Readiness Check</h3>
+      <div class="field-line"><span>Commercial Analysis</span><span class="status">READY</span></div>
+      <div class="field-line"><span>Digital Marketing</span><span class="status">READY</span></div>
+      <div class="field-line"><span>Sales & E-Commerce Interface</span><span class="status">READY</span></div>
+      <div class="field-line"><span>Excel & PowerPoint</span><span class="status">READY</span></div>
+      <div class="field-line"><span>German & English</span><span class="status">READY</span></div>
+      <div class="field-line"><span>International Collaboration</span><span class="status">READY</span></div>
+      <div class="field-line"><span>Precision Technology Learning Curve</span><span class="status">ENGAGED</span></div>
+      <div class="final-message lang-de">Nächster Einsatzort: CNH Industrial · Commercial & Marketing Support</div>
+      <div class="final-message lang-en">Next destination: CNH Industrial · Commercial & Marketing Support</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-card">
+    <span class="section-label lang-de">Kontakt · Jan Kraege</span>
+    <span class="section-label lang-en">Contact · Jan Kraege</span>
+    <h2 class="lang-de">Bereit für den nächsten Schritt.</h2>
+    <h2 class="lang-en">Ready for the Next Step.</h2>
+    <p class="lang-de">Ich freue mich darauf, meine internationale Erfahrung, mein kommerzielles Denken und meine operative Marketingpraxis bei CNH Industrial einzubringen.</p>
+    <p class="lang-en">I look forward to contributing my international experience, commercial thinking and hands-on marketing experience at CNH Industrial.</p>
+    <div class="contact-links">
+      <a href="mailto:jan.kraege@icloud.com">jan.kraege@icloud.com</a>
+      <a href="tel:+4915226436229">+49 152 26436229</a>
+      <a href="https://www.linkedin.com/in/jan-kraege" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="lang-de">Jan Kraege · Bewerbung Trainee Commercial & Marketing Support – Parts & Precision Technology · 2026</span>
+  <span class="lang-en">Jan Kraege · Application Trainee Commercial & Marketing Support – Parts & Precision Technology · 2026</span>
+</footer>
+
+<script>
+  const toggleButton = document.getElementById("languageToggle");
+  function setLanguage(language){
+    if(language==="en"){
+      document.body.classList.remove("show-de");
+      document.body.classList.add("show-en");
+      document.documentElement.lang="en";
+      toggleButton.textContent="Deutsch";
+    }else{
+      document.body.classList.remove("show-en");
+      document.body.classList.add("show-de");
+      document.documentElement.lang="de";
+      toggleButton.textContent="English";
+    }
+  }
+  toggleButton.addEventListener("click",function(){
+    setLanguage(document.body.classList.contains("show-de") ? "en" : "de");
+  });
+  setLanguage("de");
+</script>
+</body>
+</html>
